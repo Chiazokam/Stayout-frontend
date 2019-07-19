@@ -1,26 +1,27 @@
-module.exports = {
-  env: {
-    browser: true,
-    es6: true,
+{
+  "env": {
+    "browser": true,
+    "es6": true
   },
-  extends: [
-    'airbnb',
+  "extends": [
+    "airbnb"
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
   },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "jsx": true
     },
-    ecmaVersion: 2018,
-    sourceType: 'module',
+    "ecmaVersion": 2018
   },
-  plugins: [
-    'react',
+  "plugins": [
+    "react"
   ],
-  rules: {
+  "rules": {
       "max-len": [1, 120, 2, { "ignoreComments": true }],
       "jsx-quotes": ["error", "prefer-single"],
       "react/prop-types": 0,
@@ -62,5 +63,5 @@ module.exports = {
       ],
       "react/no-danger": 0,
       "jsx-a11y/interactive-supports-focus": 0
-  },
-};
+  }
+}
