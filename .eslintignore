@@ -1,0 +1,17 @@
+*.scss
+/node_modules/**
+/.env/**
+app.js
+.babelrc
+webpack.common.js
+webpack.dev.js
+webpack.prod.js
+/public/**
+/dist/**
+/build/**
+.circleci
+.github
+.eslintrc
+jest.config.js
+/cypress/**
+/src/__tests__/**
