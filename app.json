@@ -1,0 +1,19 @@
+{
+  "name": "stayout-frontend",
+  "description": "make your stay away from home more productive",
+  "repository": "https://github.com/Chiazokam/Stayout-frontend",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "scripts": {
+    "heroku-postbuild": "webpack --config webpack.prod.js"
+  },
+  "stack": "heroku-18"
+}
