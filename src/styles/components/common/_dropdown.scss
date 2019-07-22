@@ -1,0 +1,31 @@
+.dropdown li {
+ color: $off-white;
+ padding-top: 1rem;
+ margin-left: 4.5%;
+ list-style: none;
+}
+
+.home-dropdown {
+  width: 100%;
+  background-color: $dark-brown;
+  height: 5rem;
+  position: absolute;
+  margin-top: 4rem;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.dropdown-close {
+  display: none;
+}
+
+.dropdown-open {
+  display: block;
+  transition: display 2s;
+}
+
+.home-dropdown li {
+  border-bottom: 1px solid $off-white;
+  margin-right: 4.5%;
+  padding-bottom: 1rem;
+}
