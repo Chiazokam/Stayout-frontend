@@ -1,0 +1,38 @@
+.nav-web-home {
+  color: $off-white;
+  position: absolute;
+  top: 3rem;
+  left: 92%;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1224px) {
+  .nav-web-home {
+    left: 90%;
+  }
+}
+
+@media only screen and (max-width: 1204px) {
+  .nav-web-home {
+    left: 90.5%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-web-home {
+    left: 90%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .nav-web-home {
+    left: 89%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-web-home {
+    display: none;
+  }
+}

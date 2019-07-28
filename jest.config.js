@@ -23,5 +23,5 @@ module.exports = {
     moduleNameMapper: {
       '^.+\\.(jpg|png|svg)$': 'babel-jest'
     },
-    modulePathIgnorePatterns: [ 'src/index.jsx']
+    modulePathIgnorePatterns: [ 'src/index.js', 'src/App.js']
 };

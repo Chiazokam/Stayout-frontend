@@ -1,0 +1,82 @@
+.home-button {
+  position: absolute;
+  top: 46%;
+  left: 42%;
+  font-size: 24px;
+  padding: 0.6rem 1.5rem;
+  background-color: transparent;
+  color: $off-white;
+  font-weight: 200;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 0.5px solid $off-white;
+  
+  &:hover{
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .home-button {
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .home-button {
+    top: 89%;
+    left: 36%;
+  }
+}
+
+@media only screen and (max-width: 702px) {
+  .home-button {
+    left: 32%;
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  .home-button {
+    top: 94%;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .home-button {
+    top: 94%;
+    left: 30%;
+  }
+}
+
+@media only screen and (max-width: 535px) {
+  .home-button {
+    top: 95%;
+    left: 31%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home-button {
+    left: 24%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .home-button {
+    left: 25%;
+    top: 90%;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .home-button {
+    top: 92%;
+    left: 26%;
+  }
+}

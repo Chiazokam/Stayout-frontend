@@ -1,0 +1,40 @@
+.logo,
+.logo-mobile {
+  color: $off-white;
+  position: absolute;
+  font-weight: 400;
+}
+
+.logo {
+  top: 1rem;
+  left: 4.5%;
+  font-size: 48px;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+
+  .logo-mobile {
+    top: 0.8rem;
+    left: 4.5%;
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  .logo-mobile {
+    font-size: 30px;
+    top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .logo-mobile {
+    font-size: 20px;
+    top: 1.5rem;
+  }
+}

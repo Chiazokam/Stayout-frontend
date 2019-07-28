@@ -1,0 +1,11 @@
+.home-backdrop {
+  background-color: $dark-brown;
+  height: 86vh;
+  position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+  .home-backdrop {
+    display: none;
+  }
+}
