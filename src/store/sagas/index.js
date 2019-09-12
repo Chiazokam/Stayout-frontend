@@ -1,8 +1,10 @@
 import { all } from 'redux-saga/effects';
-import { actionWatcher } from './news.sagas';
+import { globalActionWatcher } from './global.sagas';
+import { authActionWatcher } from './auth.sagas';
 
 export default function* rootSaga() {
   yield all([
-    actionWatcher(),
+    globalActionWatcher(),
+    authActionWatcher(),
   ]);
 }

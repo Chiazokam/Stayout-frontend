@@ -7,6 +7,10 @@ import Button from './Button';
 import CustomSection from './CustomSection';
 import ThinLine from './ThinLine';
 import Dropdown from './Dropdown';
+import Modal from './ModalComponent';
+import Cancel from './CancelIcon';
+import FormInput from './FormInput';
+import FormInputError from './FormInputError';
 
 export {
   BackImage,
@@ -17,5 +21,9 @@ export {
   Button,
   CustomSection,
   ThinLine,
-  Dropdown
+  Dropdown,
+  Modal,
+  Cancel,
+  FormInput,
+  FormInputError
 };

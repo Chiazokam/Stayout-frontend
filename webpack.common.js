@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -59,10 +60,7 @@ module.exports = {
       template: path.join(__dirname, 'public', 'index.html'),
       title: "production"
     }),
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })
+    new Dotenv()
   ],
   output: {
     filename: 'index.bundle.js',

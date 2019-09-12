@@ -5,14 +5,24 @@
  list-style: none;
 }
 
+.dropdown li a {
+  color: $off-white;
+  font-weight: 300;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .home-dropdown {
   width: 100%;
   background-color: $dark-brown;
-  height: 5rem;
+  height: auto;
   position: absolute;
   margin-top: 4rem;
   font-size: 20px;
   font-weight: 100;
+  z-index: 1;
 }
 
 .dropdown-close {
@@ -28,4 +38,5 @@
   border-bottom: 1px solid $off-white;
   margin-right: 4.5%;
   padding-bottom: 1rem;
+  font-weight: 300;
 }

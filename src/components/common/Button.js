@@ -1,13 +1,12 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
-
 
 const Button = (props) => {
-  const { className, children } = props;
+  const { className, children, clicked } = props;
 
   return (
     <button
-      className={className}
+      onClick={clicked}
+      className={`button ${className}`}
       type='submit'
     >
       {children}
