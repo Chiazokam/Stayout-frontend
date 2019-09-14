@@ -1,62 +1,73 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Row } from 'reactstrap';
-import Media from 'react-media';
 import { BackDrop, AboutBox } from '../../components/home';
+import Signup from '../signup/Signup';
+import { openSignupModal, passMenuProps } from '../../store/actions';
 import user from '../../assets/images/user.svg';
 import team from '../../assets/images/team.svg';
 import card from '../../assets/images/card.svg';
 import {
   BackImage,
   Logo,
-  MobileHeader,
-  Hamburger,
   Button,
   CustomSection,
   ThinLine,
-  Dropdown
 } from '../../components/common';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isMenuOpen: false,
-      menu: ['Sign in']
-    };
+export class Home extends Component {
+  state = {
+    menu: ['Sign in', 'Sign up', 'Spaces']
+  };
+
+  componentDidMount() {
+    this.passMenuProps();
   }
 
-  toggleMenu = () => {
-    this.setState((prevState, props) => ({
-      isMenuOpen: !prevState.isMenuOpen,
-    }));
+  openSignupModal = () => {
+    const { openSignupModal: openSignup } = this.props;
+    openSignup();
+  }
+
+  passMenuProps = () => {
+    const { passMenuProps: passMenu } = this.props;
+    const { menu } = this.state;
+    passMenu(menu);
   }
 
   render() {
-    const { isMenuOpen, menu } = this.state;
-    let dropdownMenu = 'dropdown-close';
-    if (isMenuOpen) {
-      dropdownMenu = 'dropdown-open';
-    }
+    const { menu } = this.state;
 
     return (
       <React.Fragment>
         <BackDrop />
         <Logo className='logo' />
-        <h3 className='nav-web-home'> Sign in </h3>
-
-        <MobileHeader className='mobile-header'>
-          <Logo className='logo-mobile' />
-          <Hamburger
-            clicked={this.toggleMenu}
-          />
-        </MobileHeader>
+        <ul className='nav-container'>
+          <li className='nav-web-home'>
+            <Link to={`/${menu[2]}`}>
+              {menu[2]}
+            </Link>
+          </li>
+          <li className='nav-web-home'>
+            {menu[0]}
+          </li>
+          <li
+            onClick={this.openSignupModal}
+            role='button'
+            tabIndex='0'
+            className='nav-web-home'
+          >
+            {menu[1]}
+          </li>
+        </ul>
         <BackImage className='home-image' />
 
-        <Button
-          className='home-button'
-        >
-          Search Spaces
-        </Button>
+        <Signup />
+
+        <Button className='home-button'>Search Spaces</Button>
         <CustomSection className='home-about'>
           <Row>
             <AboutBox
@@ -81,22 +92,17 @@ class Home extends Component {
             />
           </Row>
         </CustomSection>
-
-        <Media query='(max-width: 767px)'>
-          {matches => (matches ? (
-            <Dropdown
-              menu={menu}
-              className={`home-dropdown ${dropdownMenu}`}
-            />
-          ) : (
-            null
-          ))
-          }
-        </Media>
-
       </React.Fragment>
     );
   }
 }
 
-export default Home;
+const mapDispatchToProps = {
+  openSignupModal,
+  passMenuProps,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Home);

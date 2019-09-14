@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import getNews from '../actions';
+import { getNews } from '../actions';
 
 const Button = (props) => {
   const { getNews: news } = props;
